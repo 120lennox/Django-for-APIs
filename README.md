@@ -2,7 +2,7 @@
 
 ## Installation 
 To install the required packages, run the following command in your terminal:
-Navigate to your installation directory and installation directory and install your virtual environment
+Navigate to your installation directory and install your virtual environment
 ```powershell
 pip install virtualenv
 ```
