@@ -40,16 +40,16 @@ class TodoModelTest(TestCase):
         self.assertEqual(self.todo.title, "Todo title")
         self.assertEqual(self.todo.body, "Todo body here")
         self.assertEqual(Todo.objects.count(), 1)
+        self.assertEqual(str(self.todo), "Todo title")
     
-    def test_api_list_view(self):
-        response = self.client.get(reverse("todo_list"))
+    def test_api_listview(self):
+        response = self.client.get(reverse("todo-list"))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(Todo.objects.count(), 1)
     
-    def test_api_detail_view(self):
+    def test_api_detailview(self):
         response = self.client.get(
-            "todo_detail",
-            kwargs={"pk": self.todo.id},
+            reverse("todo-detail", kwargs={"pk": self.todo.id}),
             format = "json"
         )
         self.assertEqual(response.status_code, status.HTTP_200_OK)
