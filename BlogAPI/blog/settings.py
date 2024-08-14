@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     #local apps
     'accounts',
+    'posts',
 
     #3rd party apps
     'rest_framework',
