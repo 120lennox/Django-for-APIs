@@ -6,8 +6,8 @@ from .serializers import PostSerializer
 # Create your views here.
 class PostListView(generics.ListCreateAPIView):
     queryset = Post.objects.all()
-    serializer_classes = PostSerializer
+    serializer_class = PostSerializer
 
 class PostDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
-    serializer_classes = PostSerializer
+    serializer_class = PostSerializer
