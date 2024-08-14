@@ -49,6 +49,12 @@ INSTALLED_APPS = [
 # user accounts configurations
 AUTH_USER_MODEL = "accounts.CustomUser"
 
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES":[
+        "rest_framework.permissions.AllowAny",
+    ],
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
