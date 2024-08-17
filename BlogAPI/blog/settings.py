@@ -63,6 +63,8 @@ CORS_ORIGIN_WHITELIST = (
     "https://localhost:8000",
 )
 
+CSRF_TRUSTED_ORIGINS = ["https://localhost:8000"]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
