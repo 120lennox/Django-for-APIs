@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     #3rd party apps
     'rest_framework',
+    'corsheaders'
 ]
 
 # user accounts configurations
@@ -54,6 +55,13 @@ REST_FRAMEWORK = {
         "rest_framework.permissions.AllowAny",
     ],
 }
+
+#cors headers configuration
+CORS_ORIGIN_WHITELIST = (
+    #these are specific cross domains that our serverside app will provide request to
+    "https://localhost:3000",
+    "https://localhost:8000",
+)
 
 
 MIDDLEWARE = [
