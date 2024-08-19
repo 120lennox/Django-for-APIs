@@ -44,19 +44,24 @@ INSTALLED_APPS = [
 
     #3rd party apps
     'rest_framework',
-    'corsheaders'
+    'corsheaders',
+    'rest_framework.authtoken',
 ]
 
 # user accounts configurations
 AUTH_USER_MODEL = "accounts.CustomUser"
 
+#authentication credentials
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES":[
         "rest_framework.permissions.IsAuthenticated",
     ],
-}
 
-#authentication credentials 
+    "DEFAULT_AUTHENTICATION_CLASSES":[
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.TokenAuthentication",
+    ],
+}
 
 #cors headers configuration
 CORS_ORIGIN_WHITELIST = (
