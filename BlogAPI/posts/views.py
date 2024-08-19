@@ -15,13 +15,13 @@ from rest_framework import viewsets
 class PostViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthorOrReadOnly, )
     queryset = Post.objects.all()
-    serializer_classes = PostSerializer
+    serializer_class = PostSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = get_user_model().objects.all()
-    serializer_classes = UserSerializer
+    serializer_class = UserSerializer
 
-    
+
 # class PostListView(generics.ListCreateAPIView):
 #     permission_classes = (IsAuthorOrReadOnly, )
 #     queryset = Post.objects.all()
