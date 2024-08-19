@@ -56,6 +56,8 @@ REST_FRAMEWORK = {
     ],
 }
 
+#authentication credentials 
+
 #cors headers configuration
 CORS_ORIGIN_WHITELIST = (
     #these are specific cross domains that our serverside app will provide request to
