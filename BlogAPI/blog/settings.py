@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'dj_rest_auth.registration',
+    'drf_spectacular',
 
 ]
 
@@ -67,6 +68,16 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.SessionAuthentication",
         "rest_framework.authentication.TokenAuthentication",
     ],
+    "DEFAULT_SCHEMA_CLASS":[
+        "drf_spectacular.openapi.AutoSchema",
+    ],
+}
+
+#spectacular config
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Blog API",
+    "DESCRIPTION": "Simple Blog from WSV, developed by Lennox Mountain",
+    "VERSION": "1.0.0",
 }
 
 #cors headers configuration
